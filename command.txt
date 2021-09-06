@@ -1,0 +1,22 @@
+sudo systemctl enable /home/amazigh/wso2server.service
+sudo systemctl daemon-reload
+sudo systemctl start wso2server
+
+systemctl enable wso2server
+  415  sudo systemctl enable /home/amazigh/wso2server.service
+  417  sudo systemctl start wso2server
+  420  sudo systemctl enable /home/amazigh/wso2server.service
+  421  systemctl daemon-reload
+
+/etc/systemd/system/ (and sub directories)
+/usr/local/etc/systemd/system/ (and sub directories)
+~/.config/systemd/user/ (and sub directories)
+/usr/lib/systemd/ (and sub directories)
+/usr/local/lib/systemd/ (and sub directories)
+/etc/init.d/ (Converted old service system)
+
+systemctl daemon-reload
+systemctl reset-failed
+systemctl disable [servicename]
+
+
