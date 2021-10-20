@@ -1,0 +1,23 @@
+select
+	CASE
+		WHEN dev = '999' THEN 'EUR'
+		WHEN dev = '400' THEN 'USD'
+		WHEN dev = '006' THEN 'GBP'
+		WHEN dev = '039' THEN 'CHF'
+		WHEN dev = '030' THEN 'SEK'
+		WHEN dev = '156' THEN 'CNY'
+		WHEN dev = '065' THEN 'JPY'
+		WHEN dev = '404' THEN 'CAD'
+	END as Monnaie,
+	dev,
+	cours_f,
+	date_valeur,
+	count(*)
+from F04Source 
+where date_valeur = '20211020'
+group by dev,cours_f, date_valeur
+
+
+
+
+select * from F04Source where cours_f = 1
